@@ -1,0 +1,59 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="index.css" >
+    <title>Dynamic Effect Using JQuery</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="lib/jquery-3.3.1.js"></script>
+    <style type="text/css"></style>
+
+    <script type="text/javascript">
+        function imgswitch(num) {
+            var ck = "#ck" + num;
+            var imgs = "#img" + num;
+            if ($(ck).prop('checked') == true) {
+                $(imgs).show();
+            }
+            else {
+                $(imgs).hide();
+            }
+        }
+    </script>
+    <h1>Choose your favorite animal by using jQuery</h1>
+
+</head>
+
+<body>
+    <div class="outer">
+        <input type="checkbox" name="ck1" id="ck1" onclick="imgswitch(1)">Cat the beautiful
+        <input type="checkbox" name="ck2" id="ck2" onclick="imgswitch(2)">Lion the brave
+        <input type="checkbox" name="ck3" id="ck3" onclick="imgswitch(3)">Frog the King
+        <input type="checkbox" name="ck4" id="ck4" onclick="imgswitch(4)">Zebra the best
+        <input type="checkbox" name="ck5" id="ck5" onclick="imgswitch(5)">Pig the chubbie
+
+        <br><br>
+       
+            <div class="inlineblock">
+                <img id="img1" name="img1" src="images/cat.jpg" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img2" name="img2" src="images/lion.jpg" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img3" name="img3" src="images/frog.jpg" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img4" name="img4" src="images/zebra.jpg" alt="" style="display:none">
+            </div>
+            <div class="inlineblock">
+                <img id="img5" name="img5" src="images/pig.jpg" alt="" style="display:none">
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
